@@ -7,4 +7,5 @@ void initiate(void) {
 	initDictionary();
 	initBound();
 	initAccWeight();
+	initMemory();
 }

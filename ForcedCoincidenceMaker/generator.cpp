@@ -83,7 +83,7 @@ uc randomBinary(void) {
 
 uc* treeGen(int n, int len) {
 	if (n <= 1) {
-		uc* p = new uc[len];
+		uc* p = newMemory();
 		p[0] = randomConstant();
 		p[1] = 0;
 		return p;
@@ -100,7 +100,7 @@ uc* treeGen(int n, int len) {
 	strcat(p, q);
 	p[n - 1] = randomBinary();
 	p[n] = 0;
-	delete q;
+	deleteMemory(q);
 	return p;
 }
 

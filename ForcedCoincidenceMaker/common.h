@@ -8,14 +8,16 @@ using namespace std;
 
 #define uc unsigned char
 
+//	#include "quadSwitch.h"
+
+#ifndef QUAD_SWITCH
 #define epsilon 1e-12
 #define pi 3.1415926535897932384626433832795028841971693993751058209749445923
 #define e 2.718281828459045235360287471352662497757247093699959574966967627
 #define phi 1.6180339887498948482045868343656381177203091798057628621354486227
 #define gamma 0.57721566490153286060651209008240243104215933593992359880576723
 #define NaN nan("Lapin237")
-
-//	#include "quadSwitch.h"
+#endif
 
 #define bound 7.0
 #define allPositive true
@@ -29,6 +31,7 @@ void initiate(void);
 void initDictionary(void);
 void initBound(void);
 void initAccWeight(void);
+void initMemory(void);
 
 int randomBetween(int, int);
 double calculate(unsigned char* in);
@@ -46,3 +49,6 @@ struct expr {
 expr normalize(uc*);
 expr randomExpr(void);
 void search0(void);
+
+uc* newMemory(void);
+void deleteMemory(uc*);

@@ -88,7 +88,6 @@ double unary(double x, unsigned char i) {
 	}
 }
 
-//result = 0: 正常, 1: 相反数, 2:过大或者过小，输出了自变量
 double binary(double x, double y, int i) {
 	switch (i) {
 	case plus_:
@@ -108,6 +107,7 @@ double binary(double x, double y, int i) {
 	}
 }
 
+//result = 0: 正常, 1: 相反数, 2: 过大或者过小，输出了自变量
 double unaryb(double x, unsigned char i, short* result = NULL) {
 	double r = unary(x, i);
 	if (allPositive && r < 0) {
@@ -177,9 +177,20 @@ double calculate(unsigned char* in) {
 		return NaN;
 }
 
+
 expr normalize(uc* in) {
 	expr a;
 	a.form = in;
 	a.value = calculate(in);
 	return a;
 }
+
+/*
+expr normalize(uc* in) {
+	expr a;
+	short result;
+	int pos = 0;
+
+
+}
+*/
