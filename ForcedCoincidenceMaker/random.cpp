@@ -1,3 +1,7 @@
+/*
+¸´ÖÆ×Ô£º http://www.iro.umontreal.ca/~panneton/well/
+*/
+
 #define W 32
 #define R 16
 #define P 0

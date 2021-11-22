@@ -33,6 +33,7 @@ const float binaryWeight[64] = {
 
 const float unaryProb = 0.3;
 
+//Acc : accumulating
 float constantAccWeight[64] = { 0 };
 float unaryAccWeight[64] = { 0 };
 float binaryAccWeight[64] = { 0 };
